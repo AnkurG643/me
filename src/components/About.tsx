@@ -23,7 +23,7 @@ const About = () => {
     {
       icon: Users,
       title: "Collaboration",
-      description: "Working effectively with teams and stakeholders to deliver successful projects."
+      description: "Working effectively with teams to deliver successful projects."
     }
   ];
 
@@ -35,9 +35,7 @@ const About = () => {
             <span className="hero-text">About Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate full-stack developer with 5+ years of experience building 
-            web applications. I love turning complex problems into simple, beautiful solutions 
-            that make a real impact.
+            Aspiring Software Developer and Data Scientist with a strong foundation in machine learning and full-stack web development. Proven ability to build and deploy data-driven applications, as demonstrated by successful projects. Seeking to leverage these skills in a challenging role.
           </p>
         </div>
 
@@ -58,12 +56,12 @@ const About = () => {
             <div className="text-center md:text-left">
               <h3 className="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Started coding during college and fell in love with the endless possibilities 
+                Started coding during 1st year of my college and fell in love with the endless possibilities 
                 of software development. From building my first website to creating complex 
-                full-stack applications, I've been constantly learning and growing.
+                machine learning based applications, I've been constantly learning and growing.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Today, I specialize in React, Node.js, and modern web technologies, 
+                Today, I specialize in backend technologies and data science, 
                 always staying up-to-date with the latest trends and best practices 
                 in the industry.
               </p>

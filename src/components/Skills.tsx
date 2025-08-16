@@ -5,22 +5,28 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js", "JavaScript", "HTML5", "CSS3"],
+      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "JavaScript", "HTML5", "CSS3"],
       color: "primary"
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB", "Redis", "GraphQL"],
+      skills: ["Node.js", "Express", "Python", "Flask", "PostgreSQL", "MongoDB"],
       color: "accent"
     },
     {
       title: "Tools & DevOps",
-      skills: ["Git", "Docker", "AWS", "Vercel", "Linux", "CI/CD", "Jest", "Cypress"],
+      skills: ["Git", "AWS", "Vercel", "Linux" , "Render"],
       color: "secondary"
     },
     {
+  title: "Machine Learning",
+  skills: ["Streamlit", "Scikit-learn", "Pandas", "NumPy"],
+  color: "accent"
+},
+
+    {
       title: "Design & Others",
-      skills: ["Figma", "Adobe XD", "REST APIs", "Agile", "Scrum", "UI/UX", "Responsive Design"],
+      skills: ["Figma",  "UI/UX", "Responsive Design"],
       color: "muted"
     }
   ];
@@ -65,49 +71,7 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Experience Timeline */}
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center mb-12 text-primary">Experience</h3>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {[
-                {
-                  period: "2022 - Present",
-                  role: "Senior Full Stack Developer",
-                  company: "Tech Solutions Inc.",
-                  description: "Leading development of scalable web applications using React, Node.js, and cloud technologies."
-                },
-                {
-                  period: "2020 - 2022",
-                  role: "Frontend Developer",
-                  company: "Digital Agency",
-                  description: "Built responsive web applications and collaborated with design teams to create exceptional user experiences."
-                },
-                {
-                  period: "2019 - 2020",
-                  role: "Junior Developer",
-                  company: "StartUp Co.",
-                  description: "Developed features for the company's main product using modern JavaScript frameworks and best practices."
-                }
-              ].map((exp, index) => (
-                <Card key={index} className="bg-card-gradient border-border/50">
-                  <CardContent className="p-6">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <div>
-                        <h4 className="text-lg font-semibold text-primary">{exp.role}</h4>
-                        <p className="text-accent font-medium">{exp.company}</p>
-                      </div>
-                      <Badge variant="outline" className="mt-2 md:mt-0">
-                        {exp.period}
-                      </Badge>
-                    </div>
-                    <p className="text-muted-foreground">{exp.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

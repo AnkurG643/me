@@ -59,7 +59,7 @@ const Navigation = () => {
               className="transition-bounce hover:accent-glow mr-2"
               asChild
             >
-              <a href="/sample-cv.pdf" download="Developer-Resume.pdf">
+              <a href="/Goswami_Ankur_Resume.pdf" download="Goswami_Ankur_Resume.pdf">
                 <Download className="w-4 h-4 mr-2" />
                 CV
               </a>
@@ -102,7 +102,7 @@ const Navigation = () => {
                 className="transition-bounce hover:accent-glow"
                 asChild
               >
-                <a href="/sample-cv.pdf" download="Developer-Resume.pdf">
+                <a href="/Goswami_Ankur_Resume.pdf" download="Goswami_Ankur_Resume.pdf">
                   <Download className="w-4 h-4 mr-2" />
                   Download CV
                 </a>

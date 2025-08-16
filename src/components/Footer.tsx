@@ -44,29 +44,29 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-primary">Get In Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>hello@developer.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>ankur.goswami2024.com</p>
+              <p>+91 7797642422</p>
+              <p>Kolkata,West Bengal</p>
             </div>
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
               <a 
-                href="#" 
+                href="https://github.com/AnkurG643" 
                 className="p-2 rounded-full bg-card hover:bg-primary transition-smooth hover:card-glow group"
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5 group-hover:text-primary-foreground" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/ankurgoswami643/" 
                 className="p-2 rounded-full bg-card hover:bg-accent transition-smooth hover:accent-glow group"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 group-hover:text-accent-foreground" />
               </a>
               <a 
-                href="#" 
+                href="#contact" 
                 className="p-2 rounded-full bg-card hover:bg-primary transition-smooth hover:card-glow group"
                 aria-label="Email"
               >

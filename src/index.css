@@ -98,6 +98,8 @@ All colors MUST be HSL.
   }
 }
 
+
+
 @layer components {
   .hero-text {
     background: var(--text-gradient);
@@ -121,4 +123,7 @@ All colors MUST be HSL.
   .transition-bounce {
     transition: var(--transition-bounce);
   }
+}
+span.text-foreground {
+  font-size: 2.25rem;
 }

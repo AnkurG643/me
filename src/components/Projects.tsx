@@ -2,39 +2,60 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import webAppImage from "@/assets/project-web-app.jpg";
-import mobileAppImage from "@/assets/project-mobile-app.jpg";
-import ecommerceImage from "@/assets/project-ecommerce.jpg";
+import cvss from "@/assets/cvss.png";
+import otss from "@/assets/otss.png";
+import rfss from "@/assets/rfss.png";
+import riisess from "@/assets/riisess.jpg";
+import c3ss from "@/assets/c3ss.jpg";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Task Management App",
-      description: "A comprehensive task management application with real-time collaboration, drag-and-drop functionality, and team workspace features.",
-      image: webAppImage,
-      tags: ["React", "Node.js", "PostgreSQL", "Socket.io", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "CreditVision",
+      description: "An ML-powered system for predicting credit risk and generating credit scores to support lending decisions in financial institutions.",
+      image: cvss,
+      tags: ["Numpy", "Pandas", "Scikit-learn", "Python", "Streamlit"],
+      liveUrl: "https://creditvision.onrender.com/",
+      githubUrl: "https://github.com/AnkurG643/credit-risk-modeling",
       featured: true
     },
     {
-      title: "E-Commerce Platform",
-      description: "Full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
-      image: ecommerceImage,
-      tags: ["Next.js", "Stripe", "MongoDB", "Redux", "TypeScript"],
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "OlympiTrack",
+      description: "Olympitrack is a web-based data visualization platform that showcases historical athletics data covering the previous 120 years of Olympic Games.",
+      image: otss,
+      tags: ["Numpy", "Pandas", "Scikit-learn", "Python", "Streamlit","Data Visualization","Plotly","seaborn"],
+      liveUrl: "https://olympitrack-x9d0.onrender.com/",
+      githubUrl: "https://github.com/AnkurG643/olympics",
       featured: true
     },
     {
-      title: "Mobile Banking App",
-      description: "Secure mobile banking application with biometric authentication, transaction history, and budget tracking.",
-      image: mobileAppImage,
-      tags: ["React Native", "Firebase", "Redux", "Expo", "TypeScript"],
+      title: "Research Innovation Portal",
+      description: "A management system for Research, IPR, and Startups. Backend built in Flask with secure auth, role-based access, and dynamic routing.",
+      image: riisess,
+      tags: ["javascript", "Flask", "PostgreSql", "React", "Tailwind CSS", "JWT", "Role-based access"],
+      liveUrl: "https://olympitrack-x9d0.onrender.com/",
+      githubUrl: "https://github.com/AnkurG643/olympics",
+      featured: true
+    },
+    {
+      title: "Rooflyzer",
+      description: "A web application that estimates the market value of residential properties in the city based on various input features provided by the user",
+      image: rfss,
+      tags: ["Numpy", "Pandas", "Scikit-learn", "Python", "Flask","Ridge Regression"],
+      liveUrl: "https://rooflyzer.onrender.com/",
+      githubUrl: "https://github.com/AnkurG643/Bangalore_House_price_prediction",
+      featured: true
+    },
+    {
+      title: "Medical Super App",
+      description: "Full-stack health platform with online consultations, hospital bed mgmt., emergency services. Frontend + backend by me.",
+      image: c3ss,
+      tags: ["javascript", "Express", "MongoDB", "React", "Tailwind CSS", "JWT", "Role-based access"],
       liveUrl: "#",
       githubUrl: "#",
-      featured: false
+      featured: true
     }
+    
   ];
 
   return (
@@ -163,12 +184,6 @@ const Projects = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="transition-bounce hover:accent-glow">
-            View All Projects
-          </Button>
         </div>
       </div>
     </section>

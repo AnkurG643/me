@@ -21,55 +21,67 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="bg-card-gradient border-border/50">
-            <CardHeader>
-              <CardTitle className="text-2xl text-primary">Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Name</label>
-                    <Input 
-                      placeholder="Your name" 
-                      className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-sm font-medium mb-2 block">Email</label>
-                    <Input 
-                      type="email" 
-                      placeholder="your@email.com" 
-                      className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Subject</label>
-                  <Input 
-                    placeholder="Project inquiry" 
-                    className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth"
-                  />
-                </div>
-                
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Message</label>
-                  <Textarea 
-                    placeholder="Tell me about your project..." 
-                    rows={6}
-                    className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth resize-none"
-                  />
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full transition-bounce hover:card-glow"
-                >
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+  <CardHeader>
+    <CardTitle className="text-2xl text-primary">Send a Message</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <form 
+      action="https://formspree.io/f/mgvygbvo" 
+      method="POST"  
+      className="space-y-6"
+    >
+      <div className="grid md:grid-cols-2 gap-4">
+        <div>
+          <label className="text-sm font-medium mb-2 block">Name</label>
+          <Input 
+            name="name"
+            placeholder="Your name" 
+            required
+            className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium mb-2 block">Email</label>
+          <Input 
+            type="email" 
+            name="email"
+            placeholder="your@email.com" 
+            required
+            className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth"
+          />
+        </div>
+      </div>
+      
+      <div>
+        <label className="text-sm font-medium mb-2 block">Subject</label>
+        <Input 
+          name="subject"
+          placeholder="Project inquiry" 
+          className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth"
+        />
+      </div>
+      
+      <div>
+        <label className="text-sm font-medium mb-2 block">Message</label>
+        <Textarea 
+          name="message"
+          placeholder="Tell me about your project..." 
+          rows={6}
+          required
+          className="bg-secondary/50 border-border/50 focus:border-primary transition-smooth resize-none"
+        />
+      </div>
+      
+      <Button 
+        type="submit" 
+        className="w-full transition-bounce hover:card-glow"
+      >
+        Send Message
+      </Button>
+    </form>
+  </CardContent>
+</Card>
+
 
           {/* Contact Info */}
           <div className="space-y-8">
@@ -81,7 +93,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">hello@developer.com</p>
+                    <p className="text-muted-foreground">ankur.goswami2024@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -95,7 +107,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91-7797642422</p>
                   </div>
                 </div>
               </CardContent>
@@ -109,7 +121,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Kolkata ,West Bengal</p>
                   </div>
                 </div>
               </CardContent>
@@ -120,21 +132,21 @@ const Contact = () => {
               <h3 className="text-xl font-semibold mb-6 text-primary">Connect With Me</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="#" 
+                  href="https://github.com/AnkurG643" 
                   className="p-4 rounded-full bg-card hover:bg-primary transition-smooth hover:card-glow group"
                   aria-label="GitHub"
                 >
                   <Github className="w-6 h-6 group-hover:text-primary-foreground" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/ankurgoswami643/" 
                   className="p-4 rounded-full bg-card hover:bg-accent transition-smooth hover:accent-glow group"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-6 h-6 group-hover:text-accent-foreground" />
                 </a>
                 <a 
-                  href="#" 
+                  href="#contact" 
                   className="p-4 rounded-full bg-card hover:bg-primary transition-smooth hover:card-glow group"
                   aria-label="Email"
                 >
@@ -150,7 +162,8 @@ const Contact = () => {
                 <p className="text-sm opacity-90 mb-4">
                   I'm currently accepting new freelance projects and full-time opportunities.
                 </p>
-                <Button variant="secondary" className="transition-bounce">
+                <Button 
+                variant="secondary" className="transition-bounce">
                   Let's Talk
                 </Button>
               </CardContent>

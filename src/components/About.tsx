@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Code2, Palette, Rocket, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Code2, Palette, Rocket, Users, Download } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const highlights = [
@@ -40,18 +42,44 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
-              Started coding during college and fell in love with the endless possibilities 
-              of software development. From building my first website to creating complex 
-              full-stack applications, I've been constantly learning and growing.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Today, I specialize in React, Node.js, and modern web technologies, 
-              always staying up-to-date with the latest trends and best practices 
-              in the industry.
-            </p>
+          <div className="flex flex-col items-center md:items-start">
+            {/* Profile Photo */}
+            <div className="mb-8 md:mb-6">
+              <div className="relative">
+                <img 
+                  src={profilePhoto} 
+                  alt="Developer Profile" 
+                  className="w-48 h-48 rounded-full object-cover border-4 border-primary/20 shadow-glow-primary transition-smooth hover:scale-105"
+                />
+                <div className="absolute inset-0 rounded-full bg-hero-gradient opacity-0 hover:opacity-20 transition-smooth"></div>
+              </div>
+            </div>
+            
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Started coding during college and fell in love with the endless possibilities 
+                of software development. From building my first website to creating complex 
+                full-stack applications, I've been constantly learning and growing.
+              </p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Today, I specialize in React, Node.js, and modern web technologies, 
+                always staying up-to-date with the latest trends and best practices 
+                in the industry.
+              </p>
+              
+              {/* CV Download Button */}
+              <Button 
+                variant="outline" 
+                className="transition-bounce hover:card-glow group"
+                asChild
+              >
+                <a href="/sample-cv.pdf" download="Developer-Resume.pdf">
+                  <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                  Download Resume
+                </a>
+              </Button>
+            </div>
           </div>
           
           <div className="grid grid-cols-2 gap-4">

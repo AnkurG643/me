@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import heroImage from "@/assets/hero-workspace.jpg";
 
 const Hero = () => {
@@ -36,6 +36,17 @@ const Hero = () => {
             </Button>
             <Button variant="outline" size="lg" className="transition-bounce hover:accent-glow">
               Get In Touch
+            </Button>
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="transition-bounce hover:card-glow"
+              asChild
+            >
+              <a href="/sample-cv.pdf" download="Developer-Resume.pdf">
+                <Download className="w-4 h-4 mr-2" />
+                Download CV
+              </a>
             </Button>
           </div>
           

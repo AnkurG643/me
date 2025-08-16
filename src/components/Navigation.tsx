@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,6 +54,17 @@ const Navigation = () => {
               </button>
             ))}
             <Button 
+              variant="outline"
+              size="sm"
+              className="transition-bounce hover:accent-glow mr-2"
+              asChild
+            >
+              <a href="/sample-cv.pdf" download="Developer-Resume.pdf">
+                <Download className="w-4 h-4 mr-2" />
+                CV
+              </a>
+            </Button>
+            <Button 
               variant="default"
               onClick={() => scrollToSection('#contact')}
               className="transition-bounce hover:card-glow"
@@ -87,9 +98,19 @@ const Navigation = () => {
                 </button>
               ))}
               <Button 
+                variant="outline"
+                className="transition-bounce hover:accent-glow"
+                asChild
+              >
+                <a href="/sample-cv.pdf" download="Developer-Resume.pdf">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download CV
+                </a>
+              </Button>
+              <Button 
                 variant="default"
                 onClick={() => scrollToSection('#contact')}
-                className="mt-4 transition-bounce hover:card-glow"
+                className="mt-2 transition-bounce hover:card-glow"
               >
                 Hire Me
               </Button>
